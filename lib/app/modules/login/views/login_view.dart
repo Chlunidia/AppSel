@@ -73,7 +73,13 @@ class LoginView extends GetView<LoginController> {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text("MASUK"),
+            child: Text("MASUK", style: TextStyle(color: Color(0xFF747D8C)),),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.grey[300],
+            ),
+          ),
+          Center(
+            child: Text("Atau masuk menggunakan"),
           ),
         ],
       ),
