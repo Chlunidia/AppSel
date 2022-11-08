@@ -20,6 +20,7 @@ class LoginView extends GetView<LoginController> {
           CheckboxListTile(
             value: false,
             onChanged: (value) {},
+            controlAffinity: ListTileControlAffinity.leading,
           ),
         ],
       ),
