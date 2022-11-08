@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/login_controller.dart';
@@ -10,7 +11,13 @@ class LoginView extends GetView<LoginController> {
       body: ListView(
         children: [
           Image.asset("assets/logo/logo-login.png"),
-        ]
+          const Text("Silahkan masuk dengan nomor telkomsel kamu"),
+          const Text("Nomor HP"),
+          const TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(), hintText: "Cth. 08129011xxxx"),
+          ),
+        ],
       ),
     );
   }
