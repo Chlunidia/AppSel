@@ -17,6 +17,10 @@ class LoginView extends GetView<LoginController> {
             decoration: InputDecoration(
                 border: OutlineInputBorder(), hintText: "Cth. 08129011xxxx"),
           ),
+          CheckboxListTile(
+            value: false,
+            onChanged: (value) {},
+          ),
         ],
       ),
     );
