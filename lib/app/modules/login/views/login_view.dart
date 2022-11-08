@@ -1,8 +1,5 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -10,7 +7,11 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(),
+      body: ListView(
+        children: [
+          Image.asset("assets/logo/logo-login.png"),
+        ]
+      ),
     );
   }
 }
