@@ -21,6 +21,48 @@ class LoginView extends GetView<LoginController> {
             value: false,
             onChanged: (value) {},
             controlAffinity: ListTileControlAffinity.leading,
+            title: RichText(
+              text: const TextSpan(
+                text: "Saya menyetujui ",
+                style: TextStyle(color: Colors.black),
+                children: [
+                  TextSpan(
+                    text: "syarat",
+                    style: TextStyle(color: Colors.red),
+                    children: [
+                      TextSpan(
+                        text: ",",
+                        style: TextStyle(color: Colors.black),
+                        children: [
+                          TextSpan(
+                            text: " ketentuan",
+                            style: TextStyle(color: Colors.red),
+                            children: [
+                              TextSpan(
+                                text: ", dan ",
+                                style: TextStyle(color: Colors.black),
+                                children: [
+                                  TextSpan(
+                                    text: "privasi ",
+                                    style: TextStyle(color: Colors.red),
+                                    children: [
+                                      TextSpan(
+                                        text: "Telkomsel",
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
