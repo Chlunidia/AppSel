@@ -17,64 +17,63 @@ class LoginView extends GetView<LoginController> {
             decoration: InputDecoration(
                 border: OutlineInputBorder(), hintText: "Cth. 08129011xxxx"),
           ),
-          CheckboxListTile(
-            value: false,
-            onChanged: (value) {},
-            controlAffinity: ListTileControlAffinity.leading,
-            title: RichText(
-              text: TextSpan(
-                text: "Saya menyetujui ",
-                style: const TextStyle(color: Colors.black),
-                children: [
-                  TextSpan(
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        print("klik syarat");
-                      },
-                    text: "syarat",
-                    style: const TextStyle(color: Colors.red),
+          Row(
+            children: [
+              Checkbox(
+                value: false,
+                onChanged: (value) {},
+              ),
+              Expanded(
+                child: RichText(
+                  text: TextSpan(
+                    text: "Saya menyetujui ",
+                    style: const TextStyle(color: Colors.black),
                     children: [
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("klik syarat");
+                          },
+                        text: "syarat",
+                        style: const TextStyle(color: Colors.red),
+                      ),
                       TextSpan(
                         text: ",",
                         style: TextStyle(color: Colors.black),
-                        children: [
-                          TextSpan(
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                print("klik ketentuan");
-                              },
-                            text: " ketentuan",
-                            style: TextStyle(color: Colors.red),
-                            children: [
-                              TextSpan(
-                                text: ", dan ",
-                                style: TextStyle(color: Colors.black),
-                                children: [
-                                  TextSpan(
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        print("klik ketentuan");
-                                      },
-                                    text: "privasi",
-                                    style: TextStyle(color: Colors.red),
-                                    children: [
-                                      TextSpan(
-                                        text: " Telkomsel",
-                                        style: TextStyle(color: Colors.red),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("klik ketentuan");
+                          },
+                        text: " ketentuan",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      TextSpan(
+                        text: ", dan ",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("klik ketentuan");
+                          },
+                        text: "privasi",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      TextSpan(
+                        text: " Telkomsel",
+                        style: TextStyle(color: Colors.red),
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("MASUK"),
           ),
         ],
       ),
