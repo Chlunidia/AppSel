@@ -260,6 +260,49 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
+                              Container(
+                                margin: EdgeInsets.only(bottom: 20),
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                                // color: Colors.amber,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    ItemNav(
+                                      icon: "beranda",
+                                      status: true,
+                                      title: "Beranda",
+                                    ),
+                                    ItemNav(
+                                      icon: "riwayat",
+                                      status: false,
+                                      title: "Riwayat",
+                                    ),
+                                    ItemNav(
+                                      icon: "bantuan",
+                                      status: false,
+                                      title: "Bantuan",
+                                    ),
+                                    ItemNav(
+                                      icon: "inbox",
+                                      status: false,
+                                      title: "Inbox",
+                                    ),
+                                    ItemNav(
+                                      icon: "profile",
+                                      status: false,
+                                      title: "Akun Saya",
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -269,7 +312,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
