@@ -212,13 +212,102 @@ class HomeView extends GetView<HomeController> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 15),
                   ],
+                ),
+                Container(
+                  height: 7,
+                  color: Colors.grey[300],
+                ),
+                Expanded(
+                  child: Container(
+                    // color: Colors.purple,
+                    child: Column(
+                      children: [
+                        // body
+                        Expanded(
+                          child: ListView(
+                            padding: EdgeInsets.symmetric(horizontal: 25),
+                            children: [
+                              SizedBox(height: 20),
+                              Text(
+                                "Kategori Paket",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 20),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ItemKategori(
+                                    title: "Internet",
+                                    icon: "assets/icons/internet.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "Telpon",
+                                    icon: "assets/icons/telepon.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "SMS",
+                                    icon: "assets/icons/sms.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "Roaming",
+                                    icon: "assets/icons/roaming.png",
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class ItemKategori extends StatelessWidget {
+  ItemKategori({
+    Key? key,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
+
+  final String title;
+  final String icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 50,
+          height: 50,
+          child: Image.asset(
+            icon,
+            fit: BoxFit.cover,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ],
     );
   }
 }
