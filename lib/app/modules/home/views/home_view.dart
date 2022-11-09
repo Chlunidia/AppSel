@@ -110,6 +110,19 @@ class HomeView extends GetView<HomeController> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Isi Pulsa",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xFFF7B731),
+                              ),
+                            ),
                           ],
                         ),
                       ],
