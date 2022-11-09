@@ -260,6 +260,29 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
+                              SizedBox(height: 30),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ItemKategori(
+                                    title: "Hiburan",
+                                    icon: "assets/icons/hiburan.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "Unggulan",
+                                    icon: "assets/icons/unggulan.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "Tersimpan",
+                                    icon: "assets/icons/tersimpan.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "Riwayat",
+                                    icon: "assets/icons/riwayat-icon.png",
+                                  ),
+                                ],
+                              ),
                               Container(
                                 margin: EdgeInsets.only(bottom: 20),
                                 height: 100,
