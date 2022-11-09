@@ -10,16 +10,50 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
+        centerTitle: false,
+        title: RichText(
+          text: TextSpan(
+            text: "Hai, ",
+            style: TextStyle(
+              fontSize: 18,
+            ),
+            children: [
+              TextSpan(
+                text: "Chlunidia",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              margin: EdgeInsets.only(right: 20),
+              width: 30,
+              height: 30,
+              child: Image.asset(
+                "assets/icons/qr.png",
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
+        backgroundColor: Color(0xFFEC2028),
+        elevation: 0,
       ),
       body: Stack(
         children: [
           ClipPath(
             clipper: ClipPathClass(),
-            child: Container(height: 250,
-            width: Get.width,
-            color: Color(0xFFEC2028),),
+            child: Container(
+              height: 250,
+              width: Get.width,
+              color: Color(0xFFEC2028),
+            ),
           )
         ],
       ),
@@ -43,7 +77,7 @@ class ClipPathClass extends CustomClipper<Path> {
 
     return path;
   }
-  
+
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }
