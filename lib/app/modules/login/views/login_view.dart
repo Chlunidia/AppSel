@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,6 +19,7 @@ class LoginView extends GetView<LoginController> {
             decoration: InputDecoration(
                 border: OutlineInputBorder(), hintText: "Cth. 08129011xxxx"),
           ),
+          SizedBox(height: 10),
           Row(
             children: [
               Checkbox(
@@ -37,7 +40,7 @@ class LoginView extends GetView<LoginController> {
                         text: "syarat",
                         style: const TextStyle(color: Colors.red),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: ",",
                         style: TextStyle(color: Colors.black),
                       ),
@@ -47,9 +50,9 @@ class LoginView extends GetView<LoginController> {
                             print("klik ketentuan");
                           },
                         text: " ketentuan",
-                        style: TextStyle(color: Colors.red),
+                        style: const TextStyle(color: Colors.red),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: ", dan ",
                         style: TextStyle(color: Colors.black),
                       ),
@@ -59,9 +62,9 @@ class LoginView extends GetView<LoginController> {
                             print("klik ketentuan");
                           },
                         text: "privasi",
-                        style: TextStyle(color: Colors.red),
+                        style: const TextStyle(color: Colors.red),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: " Telkomsel",
                         style: TextStyle(color: Colors.red),
                       ),
@@ -73,7 +76,7 @@ class LoginView extends GetView<LoginController> {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               "MASUK",
               style: TextStyle(color: Color(0xFF747D8C)),
             ),
@@ -81,10 +84,13 @@ class LoginView extends GetView<LoginController> {
               primary: Colors.grey[300],
             ),
           ),
-          Center(
+          const SizedBox(height: 20),
+          const Center(
             child: Text("Atau masuk menggunakan"),
           ),
+          const SizedBox(height: 40),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               OutlinedButton(
                 onPressed: () {},
@@ -92,9 +98,44 @@ class LoginView extends GetView<LoginController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/icons/fb.png"),
-                    SizedBox(width: 7,),
-                    Text(
+                    const SizedBox(
+                      width: 7,
+                    ),
+                    const Text(
                       "Facebook",
+                      style: TextStyle(
+                        color: Color(0xFF3B599B),
+                      ),
+                    ),
+                  ],
+                ),
+                style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(
+                    const Size(150, 50),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                  ),
+                  side: MaterialStateProperty.all(
+                    const BorderSide(
+                      color: Color(0xFF3B5998),
+                    ),
+                  ),
+                ),
+              ),
+              OutlinedButton(
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("assets/icons/twitter.png"),
+                    const SizedBox(
+                      width: 7,
+                    ),
+                    const Text(
+                      "Twitter",
                       style: TextStyle(
                         color: Color(0xFF747DBC),
                       ),
@@ -102,13 +143,14 @@ class LoginView extends GetView<LoginController> {
                   ],
                 ),
                 style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(const Size(150, 50)),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
                   side: MaterialStateProperty.all(
-                    BorderSide(
+                    const BorderSide(
                       color: Color(0xFF3B5998),
                     ),
                   ),
