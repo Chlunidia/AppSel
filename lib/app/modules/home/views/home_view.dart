@@ -283,6 +283,29 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
+                              SizedBox(height: 30),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Terbaru dari Telkomsel",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Lihat Semua",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                               Container(
                                 margin: EdgeInsets.only(bottom: 20),
                                 height: 100,
