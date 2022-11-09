@@ -88,7 +88,30 @@ class HomeView extends GetView<HomeController> {
                             ),
                             Image.asset("assets/logo/simpati.png")
                           ],
-                        )
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Sisa Pulsa Anda",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Rp34.000",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
