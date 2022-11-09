@@ -89,8 +89,10 @@ class LoginView extends GetView<LoginController> {
               OutlinedButton(
                 onPressed: () {},
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/icons/fb.png"),
+                    SizedBox(width: 7,),
                     Text(
                       "Facebook",
                       style: TextStyle(
