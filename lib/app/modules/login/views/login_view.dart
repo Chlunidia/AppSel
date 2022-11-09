@@ -160,8 +160,8 @@ class LoginView extends GetView<LoginController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("assets/icons/twt.png"),
-                      SizedBox(height: 7)
+                      Image.asset("assets/icons/twitter.png"),
+                      SizedBox(width: 7)
                     ],
                   ),
                   style: ButtonStyle(
