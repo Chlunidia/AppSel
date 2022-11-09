@@ -125,6 +125,30 @@ class HomeView extends GetView<HomeController> {
                             ),
                           ],
                         ),
+                        SizedBox(height: 10),
+                        Divider(
+                          color: Colors.black,
+                        ),
+                        SizedBox(height: 10),
+                        RichText(
+                          text: TextSpan(
+                            text: "Berlaku sampai ",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: "19 April 2020",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
