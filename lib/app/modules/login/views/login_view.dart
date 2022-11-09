@@ -73,7 +73,10 @@ class LoginView extends GetView<LoginController> {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text("MASUK", style: TextStyle(color: Color(0xFF747D8C)),),
+            child: Text(
+              "MASUK",
+              style: TextStyle(color: Color(0xFF747D8C)),
+            ),
             style: ElevatedButton.styleFrom(
               primary: Colors.grey[300],
             ),
@@ -81,6 +84,36 @@ class LoginView extends GetView<LoginController> {
           Center(
             child: Text("Atau masuk menggunakan"),
           ),
+          Row(
+            children: [
+              OutlinedButton(
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Image.asset("assets/icons/fb.png"),
+                    Text(
+                      "Facebook",
+                      style: TextStyle(
+                        color: Color(0xFF747DBC),
+                      ),
+                    ),
+                  ],
+                ),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                  ),
+                  side: MaterialStateProperty.all(
+                    BorderSide(
+                      color: Color(0xFF3B5998),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
