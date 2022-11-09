@@ -306,48 +306,74 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
-                              Container(
-                                margin: EdgeInsets.only(bottom: 20),
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  border: Border(
-                                    top: BorderSide(
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                                // color: Colors.amber,
+                              SizedBox(height: 20),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    ItemNav(
-                                      icon: "beranda",
-                                      status: true,
-                                      title: "Beranda",
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-1.png",
                                     ),
-                                    ItemNav(
-                                      icon: "riwayat",
-                                      status: false,
-                                      title: "Riwayat",
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-2.png",
                                     ),
-                                    ItemNav(
-                                      icon: "bantuan",
-                                      status: false,
-                                      title: "Bantuan",
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-1.png",
                                     ),
-                                    ItemNav(
-                                      icon: "inbox",
-                                      status: false,
-                                      title: "Inbox",
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-2.png",
                                     ),
-                                    ItemNav(
-                                      icon: "profile",
-                                      status: false,
-                                      title: "Akun Saya",
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-1.png",
+                                    ),
+                                    ItemTerbaru(
+                                      image: "assets/icons/images-2.png",
                                     ),
                                   ],
                                 ),
+                              ),
+                              SizedBox(height: 30),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(bottom: 20),
+                          height: 100,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              top: BorderSide(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          // color: Colors.amber,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              ItemNav(
+                                icon: "beranda",
+                                status: true,
+                                title: "Beranda",
+                              ),
+                              ItemNav(
+                                icon: "riwayat",
+                                status: false,
+                                title: "Riwayat",
+                              ),
+                              ItemNav(
+                                icon: "bantuan",
+                                status: false,
+                                title: "Bantuan",
+                              ),
+                              ItemNav(
+                                icon: "inbox",
+                                status: false,
+                                title: "Inbox",
+                              ),
+                              ItemNav(
+                                icon: "profile",
+                                status: false,
+                                title: "Akun Saya",
                               ),
                             ],
                           ),
@@ -358,8 +384,34 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-          )
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class ItemTerbaru extends StatelessWidget {
+  ItemTerbaru({
+    Key? key,
+    required this.image,
+  }) : super(key: key);
+
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 20),
+      width: Get.width * 0.7,
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.amber,
+        borderRadius: BorderRadius.circular(20),
+        image: DecorationImage(
+          image: AssetImage(image),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
