@@ -59,137 +59,218 @@ class HomeView extends GetView<HomeController> {
             margin: EdgeInsets.only(top: 20),
             child: Column(
               children: [
-                ClipPath(
-                  clipper: ClipInfoClass(),
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 25),
-                    height: 200,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color(0xFFE52D27),
-                          Color(0xFFB31217),
-                        ],
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "081290112333",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Image.asset("assets/logo/simpati.png")
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Text(
-                          "Sisa Pulsa Anda",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Rp34.000",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 26,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Isi Pulsa",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xFFF7B731),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Divider(
-                          color: Colors.black,
-                        ),
-                        SizedBox(height: 10),
-                        RichText(
-                          text: TextSpan(
-                            text: "Berlaku sampai ",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: "19 April 2020",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              )
+                Column(
+                  children: [
+                    ClipPath(
+                      clipper: ClipInfoClass(),
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        margin: EdgeInsets.symmetric(horizontal: 25),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0xFFE52D27),
+                              Color(0xFFB31217),
                             ],
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "081290112333",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Image.asset("assets/logo/simpati.png")
+                              ],
+                            ),
+                            SizedBox(height: 20),
                             Text(
-                              "Telkomsel POIN",
+                              "Sisa Pulsa Anda",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
                               ),
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Rp34.000",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Isi Pulsa",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Color(0xFFF7B731),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Divider(
+                              color: Colors.black,
+                            ),
+                            SizedBox(height: 10),
+                            RichText(
+                              text: TextSpan(
+                                text: "Berlaku sampai ",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: "19 April 2020",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Telkomsel POIN",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 10),
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 8,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFF7B731),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "172",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                             SizedBox(width: 10),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 8,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Color(0xFFF7B731),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "172",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
                           ],
                         ),
-                        SizedBox(width: 10),
-                      ],
+                      ),
                     ),
-                  ),
+                    SizedBox(height: 15),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          StatusCard(
+                            title: "Internet",
+                            data: "12.19",
+                            satuan: "GB",
+                          ),
+                          StatusCard(
+                            title: "Telepon",
+                            data: "0",
+                            satuan: "Min",
+                          ),
+                          StatusCard(
+                            title: "SMS",
+                            data: "23",
+                            satuan: "SMS",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class StatusCard extends StatelessWidget {
+  StatusCard({
+    Key? key,
+    required this.title,
+    required this.data,
+    required this.satuan,
+  }) : super(key: key);
+
+  final String title;
+  final String data;
+  final String satuan;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Container(
+        padding: EdgeInsets.all(10),
+        width: Get.width * 0.25,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            RichText(
+              text: TextSpan(
+                text: data,
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Color(0xFFEC2028),
+                  fontWeight: FontWeight.bold,
+                ),
+                children: [
+                  TextSpan(
+                    text: " $satuan",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xFF747D8C),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
