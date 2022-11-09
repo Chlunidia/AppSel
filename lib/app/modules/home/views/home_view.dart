@@ -54,11 +54,69 @@ class HomeView extends GetView<HomeController> {
               width: Get.width,
               color: Color(0xFFEC2028),
             ),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                ClipPath(
+                  clipper: ClipInfoClass(),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 25),
+                    height: 200,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFFE52D27),
+                          Color(0xFFB31217),
+                        ],
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "081290112333",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Image.asset("assets/logo/simpati.png")
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
+}
+
+class ClipInfoClass extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    path.lineTo(0, size.height);
+    path.lineTo(size.width - 80, size.height);
+    path.lineTo(size.width, size.height - 80);
+    path.lineTo(size.width, 0);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }
 
 class ClipPathClass extends CustomClipper<Path> {
