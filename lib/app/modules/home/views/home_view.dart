@@ -312,6 +312,44 @@ class ItemKategori extends StatelessWidget {
   }
 }
 
+class ItemNav extends StatelessWidget {
+  ItemNav({
+    Key? key,
+    required this.status,
+    required this.icon,
+    required this.title,
+  }) : super(key: key);
+
+  final bool status;
+  final String title;
+  final String icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 30,
+          child: Image.asset(
+            (status == true)
+                ? "assets/icons/$icon-active.png"
+                : "assets/icons/$icon.png",
+            fit: BoxFit.contain,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          "Beranda",
+          style: TextStyle(
+            color: (status == true) ? Color(0xFFEC2028) : Color(0xFF747D8C),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 class StatusCard extends StatelessWidget {
   StatusCard({
     Key? key,
