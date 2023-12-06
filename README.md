@@ -1,16 +1,6 @@
-# appsel
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# AppSel
+## The following image showcases the AppSel application interface.
+<p align=center>
+  <img src="https://github.com/Chlunidia/AppSel/assets/115222445/d093c2c1-c7de-4ece-935b-7f12fbc10c99" alt="2" width="200">
+  <img src="https://github.com/Chlunidia/AppSel/assets/115222445/56ebde21-7663-4bdd-b131-3f0f486198aa" alt="1" width="200">
+</p>
